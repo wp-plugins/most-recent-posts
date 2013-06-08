@@ -3,7 +3,7 @@ Contributors: Vaughn Bullard
 Tags: recent, posts, most recent posts, posts in pages.
 Requires at least: 3.5.1
 Tested up to: 3.5.1
-Stable tag: 1.0
+Stable tag: 1.1
 
 Add Most Recent Posts to your WordPress side rail, posts, pages or theme.  
 
@@ -49,3 +49,5 @@ There is built-in help in the Most Recent Posts plugin.
 == Changelog ==
 
 Version 1.0 - No Changes
+
+Version 1.1 - Category add, was accidentally deleted on initial add to repository
