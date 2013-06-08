@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Most Recent Posts
-Version: 1.0
+Version: 1.1
 Description: BuildAutomate’s Most Recent Posts plugin allows you the WordPress developer or administrator to embed the most recent posts in your WordPress sites.  It also allows you to limit posts by number, post type and post status.
 
 Author: Vaughn Bullard, Build.Automate, Inc.
