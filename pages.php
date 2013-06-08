@@ -71,6 +71,7 @@ function MRPShortcodes()
 	$content .= '<tr><th>Shortcode Attribute</th><th>Shortcode Possible Values</th><th>Shortcode Description</th></tr>';
 	$content .= '<tr><td>numposts</td><td>1 to X (Integer) </td><td>Maximum Number of Posts To Display</td></tr>';	
 	$content .= '<tr><td>showtext</td><td>1</td><td>Show text.  Should always set to 1.  Can be left out when a featured image is used instead of a textual link.</td></tr>';						
+	$content .= '<tr><td>category</td><td>1,5</td><td>Comma Separated IDs of categories of posts.  If all categories are needed, leave blank in widget or have no category attribute.</td></tr>';							
 	$content .= '<tr><td>orderby</td><td>ASC or DESC </td><td>Display by Ascending or Descending Order</td></tr>';		
 	$content .= '<tr><td>include</td><td>1,2,3</td><td>Comma Separated IDs of posts to include in list</td></tr>';		
 	$content .= '<tr><td>exclude</td><td>1,2,3</td><td>Comma Separated IDs of posts to exclude in list</td></tr>';			

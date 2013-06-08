@@ -74,12 +74,13 @@ Class most_recent_posts {
 										 'linkdate' => '',
 										 'showauthor' => '',
 										 'linkauthor' => '',
-										 'showtext' => ''), $atts));
+										 'showtext' => '',
+										 'category' => ''), $atts));
 						
 			$args = array(
 				'numberposts' => $numposts,
 				'offset' => 0,
-				'category' => 0,
+				'category' => $category,
 				'orderby' => 'post_date',
 				'order' => $orderby,
 				'include' => $include,

@@ -59,6 +59,7 @@ class Most_Recent_Posts_Widget extends WP_Widget {
 		$showauthor			= $instance['showauthor'];									
 		$linkauthor			= $instance['linkauthor'];	
 		$showtext			= $instance['showtext'];		
+		$category			= $instance['category'];			
 
 		/* Before widget (defined by themes). */
 		echo $before_widget;
@@ -85,6 +86,8 @@ class Most_Recent_Posts_Widget extends WP_Widget {
 		$ps			= '';
 		if($post_status)
 		{	$ps		= ' post_status="'.$post_status.'"';   }				
+		if($category)
+		{	$ct		= ' category="'.$category.'"';   }	
 		if($show_date)
 		{	
 			$sd		= ' show_date="'.$show_date.'"';   
@@ -109,7 +112,7 @@ class Most_Recent_Posts_Widget extends WP_Widget {
 		if($showtext)
 		{	$st		= ' showtext="'.$showtext.'"';	}			
 				
-		$shortcode = '[mostrecentposts '.$np.$ob.$in.$st.$ex.$pt.$ps.$sd.$df.$tn.$tw.$th.$lt.$li.$ld.$sa.$la.' ]';
+		$shortcode = '[mostrecentposts '.$np.$ob.$in.$ct.$st.$ex.$pt.$ps.$sd.$df.$tn.$tw.$th.$lt.$li.$ld.$sa.$la.' ]';
 		
 			echo '<p>';
 			echo (do_shortcode($shortcode));			
@@ -143,6 +146,7 @@ class Most_Recent_Posts_Widget extends WP_Widget {
 		$instance['showauthor']			= strip_tags( $new_instance['showauthor'] );	
 		$instance['linkauthor']			= strip_tags( $new_instance['linkauthor'] );																	
 		$instance['showtext']			= strip_tags( $new_instance['showtext'] );	
+		$instance['category']			= strip_tags( $new_instance['category'] );			
 
 		return $instance;
 	}
@@ -175,6 +179,17 @@ class Most_Recent_Posts_Widget extends WP_Widget {
 			<input style="float:right" id="<?php echo $this->get_field_id( 'numposts' ); ?>" name="<?php echo $this->get_field_name( 'numposts' ); ?>" value="<?php echo $instance['numposts']; ?>" style="width:20%;"/>
 		</td>
 		</tr>
+		<!-- Category: Category IDs -->
+		<tr>
+		<td colspan="2">
+			<label for="<?php echo $this->get_field_id( 'category' ); ?>"><?php _e('Category IDs to include:', 'mostrecentpostswidget'); ?></label>
+		</td>
+		</tr>
+		<tr>
+		<td colspan="2" align="right">
+			<input style="float:right" id="<?php echo $this->get_field_id( 'category' ); ?>" name="<?php echo $this->get_field_name( 'category' ); ?>" value="<?php echo $instance['category']; ?>" style="width:20%;"/>
+		</td>
+		</tr>		
 		</table>
 		<!-- Widget Title: Post Type Input -->
 		<p>
@@ -235,6 +250,7 @@ class Most_Recent_Posts_Widget extends WP_Widget {
 		?>
 		</p>	
 		<p>
+			
 		<?php $showauthorchecked = esc_attr($instance['showauthor']); ?>
 			<input id="<?php echo $this->get_field_id('showauthor'); ?>" name="<?php echo $this->get_field_name('showauthor'); ?>" value="1" type="checkbox" <?php checked( '1', $showauthorchecked ); ?> />
 			<label for="<?php echo $this->get_field_id( 'showauthor' ); ?>"><?php _e('Show Author?', 'mostrecentpostswidget'); ?></label>

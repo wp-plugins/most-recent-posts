@@ -43,6 +43,8 @@ There is built-in help in the Most Recent Posts plugin.
 
 5. Screenshot of Plugin Live on Build.Automate website
 
+6. Screenshot of possible shortcode attributes, their attributes and possible values
+
 
 == Changelog ==
 
